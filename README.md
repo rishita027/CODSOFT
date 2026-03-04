@@ -13,6 +13,7 @@ The platform allows users to add questions with multiple-choice answers and then
 The home page provides a welcome message and options for users to either create a new quiz or take an existing quiz.
 # HOW TO USE QUIZCRAFT
 open and save all the files go to index.html and right click on open with the live server option the website will be live displaying the quizcraft , the user must register than login with gmail address and 6 character or digit password next it will take you to the dashboard with 3 options i.e Create quiz, Take quiz,Logout.
+<img width="591" height="701" alt="quizcraft-homepage" src="https://github.com/user-attachments/assets/7c1e6d77-08ba-494b-b433-c8fe29050799" />
 ### Quiz Creation
 Users can create their own quiz by entering:
 * Quiz title
