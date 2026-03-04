@@ -33,7 +33,17 @@ The website is designed to work properly on different devices such as laptops, t
 * HTML
 * CSS
 * JavaScript
-These technologies were used to build the user interface and implement the quiz functionality
+These technologies were used to build the user interface and implement the quiz functionality.
+## Deployment
+The QuizCraft project is deployed using **Firebase Hosting**, which allows the website to be accessed online.
+### Steps used for deployment
+1. Install Firebase CLI.
+2. Login to Firebase using the terminal.
+3. Initialize Firebase in the project folder.
+4. Select Firebase Hosting during setup.
+5. Deploy the project using the Firebase deploy command.
+After deployment, the project becomes accessible through a public URL provided by Firebase.
+This allows users to access and use the QuizCraft application directly from the web without installing anything.
 ## Internship
 This project was completed as part of the **CodSoft Web Development Internship Program**.
 ## Future Improvements
@@ -47,5 +57,7 @@ This is a basic version of the QuizCraft platform. In the future, it can be impr
 * Database integration to store quizzes permanently
 * Admin panel to manage quizzes and users
 These improvements can make the platform more interactive and suitable for real-world use.
+## Author
+Developed by Rishita Patil.
 
 
