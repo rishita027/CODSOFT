@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - QuizCraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Register</h1>
+    <p class="tagline">Create your QuizCraft account</p>
+
+    <form>
+        <input type="text" id="name" placeholder="Full Name" required><br><br>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="password" id="password" placeholder="Password" required><br><br>
+
+        <div class="buttons">
+            <button type="button" id="registerBtn">Register</button>
+        </div>
+    </form>
+
+    <div class="footer">
+        Already have an account?
+        <a href="login.html" style="color:#00f5a0;">Login</a>
+    </div>
+</div>
+
+<script type="module">
+import { auth } from "./firebase.js";
+import { createUserWithEmailAndPassword }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const registerBtn = document.getElementById("registerBtn");
+
+registerBtn.addEventListener("click", async () => {
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!name || !email || !password) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        alert("Registration successful!");
+        window.location.href = "login.html";
+    } catch (error) {
+        alert(error.message);
+    }
+
+});
+</script>
+
+</body>
+</html>

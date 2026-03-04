@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Quiz - QuizCraft</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Create Quiz</h1>
+
+<input type="text" id="quizTitle" placeholder="Enter Quiz Title">
+
+<div id="questionsContainer"></div>
+
+<br>
+
+<button id="addQuestion">Add Next Question</button>
+<button id="saveQuiz">Save Quiz</button>
+
+</div>
+
+<script type="module">
+
+import { auth, db } from "./firebase.js";
+import { addDoc, collection }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const container = document.getElementById("questionsContainer");
+const addBtn = document.getElementById("addQuestion");
+const saveBtn = document.getElementById("saveQuiz");
+
+let questionCount = 0;
+
+function addQuestionCard(){
+
+    questionCount++;
+
+    const card = document.createElement("div");
+    card.className = "question-card";
+
+    card.innerHTML = `
+    <h3>Question ${questionCount}</h3>
+
+    <input type="text" class="questionText" placeholder="Enter question">
+
+    <input type="text" class="option" placeholder="Option A">
+    <input type="text" class="option" placeholder="Option B">
+    <input type="text" class="option" placeholder="Option C">
+    <input type="text" class="option" placeholder="Option D">
+
+    <select class="correctAnswer">
+        <option value="">Select Correct Answer</option>
+        <option value="0">A</option>
+        <option value="1">B</option>
+        <option value="2">C</option>
+        <option value="3">D</option>
+    </select>
+    `;
+
+    container.appendChild(card);
+}
+
+addBtn.onclick = addQuestionCard;
+
+// start with first question automatically
+addQuestionCard();
+
+saveBtn.onclick = async ()=>{
+
+    const title = document.getElementById("quizTitle").value;
+
+    const cards = document.querySelectorAll(".question-card");
+
+    let questions = [];
+
+    cards.forEach(card=>{
+
+        const q = card.querySelector(".questionText").value;
+
+        const opts = card.querySelectorAll(".option");
+
+        const correct = card.querySelector(".correctAnswer").value;
+
+        questions.push({
+            question:q,
+            options:[
+                opts[0].value,
+                opts[1].value,
+                opts[2].value,
+                opts[3].value
+            ],
+            correctAnswer:Number(correct)
+        });
+
+    });
+
+    await addDoc(collection(db,"quizzes"),{
+        title:title,
+        createdBy:auth.currentUser.uid,
+        questions:questions
+    });
+
+    alert("Quiz Saved Successfully!");
+
+    window.location.href="dashboard.html";
+
+};
+
+</script>
+
+</body>
+</html>
+

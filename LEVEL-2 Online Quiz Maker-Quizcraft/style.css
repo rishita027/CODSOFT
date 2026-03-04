@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 60px 80px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+    text-align: center;
+    width: 420px;
+}
+
+.container h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.features {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    opacity: 0.7;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00f5a0, #00d9f5);
+    color: black;
+    transition: 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f5a0;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.5;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+/* Neon animated gradient */
+body {
+    background: linear-gradient(-45deg, #0a0a0f, #120018, #001a1f, #0a0a0f);
+    background-size: 400% 400%;
+    animation: neonFlow 12s ease infinite;
+}
+
+@keyframes neonFlow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+.quiz-wrapper input,
+.quiz-wrapper select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(0,255,255,0.4);
+    background: rgba(0,0,0,0.5);
+    color: #00f5ff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.quiz-wrapper input:focus,
+.quiz-wrapper select:focus {
+    box-shadow: 0 0 15px #00f5ff;
+}
+#generateBtn {
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #ff00cc, #00f5ff);
+    box-shadow: 0 0 20px #ff00cc, 0 0 40px #00f5ff;
+    transition: 0.4s ease;
+}
+
+#generateBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #ff00cc, 0 0 60px #00f5ff;
+}
+#saveQuizBtn {
+    margin-top: 25px;
+    padding: 14px 45px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00f5a0, #00d9f5);
+    color: black;
+    box-shadow: 0 0 25px #00f5ff;
+    transition: 0.3s;
+}
+
+#saveQuizBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px #00f5ff;
+}
+.question-card {
+    background: rgba(0,0,0,0.45);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 20px;
+    border: 1px solid rgba(0,255,255,0.2);
+    box-shadow: 0 0 20px rgba(0,255,255,0.15);
+}
+/* Correct Answer Dropdown Styling */
+
+.correctAnswer{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:30px;
+    border:none;
+    font-size:14px;
+    font-weight:600;
+
+    background:linear-gradient(45deg,#00f5a0,#00d9f5);
+    color:rgb(200, 26, 223);
+
+    cursor:pointer;
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    text-align:center;
+
+    transition:0.3s ease;
+}
+
+.correctAnswer:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #25d094;
+}
+.correctAnswer{
+background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23000000' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+background-repeat:no-repeat;
+background-position:right 15px center;
+}

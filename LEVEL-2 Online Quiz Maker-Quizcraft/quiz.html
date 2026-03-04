@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take Quiz - QuizCraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Select a Quiz</h1>
+    <p class="tagline">Choose a quiz to begin</p>
+
+    <div id="quizList" class="buttons"></div>
+</div>
+
+<script type="module">
+import { db } from "./firebase.js";
+import { collection, getDocs }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const quizList = document.getElementById("quizList");
+
+async function loadQuizzes() {
+    const snapshot = await getDocs(collection(db, "quizzes"));
+
+    if (snapshot.empty) {
+        quizList.innerHTML = "<p>No quizzes available</p>";
+        return;
+    }
+
+    snapshot.forEach(doc => {
+        const quiz = doc.data();
+
+        const btn = document.createElement("button");
+        btn.textContent = quiz.title;
+
+        btn.onclick = () => {
+            localStorage.setItem("selectedQuiz", JSON.stringify(quiz));
+            window.location.href = "play.html";
+        };
+
+        quizList.appendChild(btn);
+    });
+}
+
+loadQuizzes();
+</script>
+
+</body>
+</html> 
