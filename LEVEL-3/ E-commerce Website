@@ -1,0 +1,14 @@
+## LEVEL 3 - TASK: E-commerce Website
+Technologies Used:
+React
+Node.js
+Express.js
+MongoDB Atlas
+
+Features:
+User Authentication
+Product Search & Filter
+Add to Cart
+Cart Management
+QR Dummy Payment
+logout
