@@ -58,6 +58,24 @@ This is a basic version of the QuizCraft platform. In the future, it can be impr
 * Database integration to store quizzes permanently
 * Admin panel to manage quizzes and users
 These improvements can make the platform more interactive and suitable for real-world use.
+## LEVEL-3:ECOMMERCE WEBSITE
+Built an  simple e-commerce website where users can browse products, add items to
+a shopping cart, and proceed to checkout. Implement features like user
+authentication, product filtering, and dummy QR payment integration using technologies
+like React, Node.js, and MongoDB.
+LEVEL 3 - TASK: E-commerce Website
+Technologies Used:
+React
+Node.js
+Express.js
+MongoDB Atlas
+Features:
+User Authentication
+Product Search & Filter
+Add to Cart
+Cart Management
+QR Dummy Payment
+
 ## Author
 Developed by Rishita Patil.
 
