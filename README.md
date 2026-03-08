@@ -74,7 +74,46 @@ User Authentication
 Product Search & Filter
 Add to Cart
 Cart Management
-QR Dummy Payment
+QR Dummy Payment.
+## Project Structure
+E-commerce Website
+│
+├── client
+│   ├── src
+│   ├── public
+│   └── package.json
+│
+├── server
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+## How to Run the Project
+## Step 1 – Install Dependencies
+Server
+cd server
+npm install
+
+Client
+cd client
+npm install
+## Step 2 – Start Backend Server
+cd server
+node server.js
+Server will run on:
+http://localhost:5000
+## Step 3 – Start Frontend
+cd client
+npm start
+
+## Frontend will run on:
+http://localhost:3000
+## Database
+The application uses MongoDB Atlas to store:
+User Accounts
+Product Data
+Cart Information
+
 
 ## Author
 Developed by Rishita Patil.
