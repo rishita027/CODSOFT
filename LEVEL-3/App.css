@@ -1,0 +1,65 @@
+/* Page Background */
+body{
+background-color:#987d9c;
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+}
+
+/* Main Heading */
+h1{
+color:#e258c2;
+text-align:center;
+margin-top:20px;
+}
+
+/* Section heading */
+h2{
+color:#ff75ed;
+margin-left:20px;
+}
+
+/* Product Container */
+.product{
+background:white;
+margin:15px 20px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Product Name */
+.product h3{
+color:#6a0dad;
+}
+
+/* Price text */
+.price{
+color:#2e2bdb;
+font-weight:bold;
+}
+
+/* Button */
+button{
+background-color:#87cefa;
+border:none;
+padding:8px 15px;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background-color:#5bb6f5;
+}
+
+/* Links */
+a{
+color:#181e96;
+font-weight:bold;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
